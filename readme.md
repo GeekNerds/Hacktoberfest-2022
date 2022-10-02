@@ -12,7 +12,7 @@
 
 <br>
 
-## Hacktoberfest 2021 Special
+## Hacktoberfest 2022 Special
 
 - We will be posting a problem daily at 10 AM related to languages like HTML/CSS, Python, C++ till 30th Oct.
 
@@ -27,7 +27,7 @@
 
 Open source is changing the world- one pull request at a time.
 Hactoberfest encourages participation in open source community, which grows bigger every year. 
-Complete the 2021 challenge and earn a limited edition T-shirt.
+Complete the 2022 challenge and earn a limited edition T-shirt.
 
 
 
