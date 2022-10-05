@@ -1,4 +1,4 @@
-//Program to Movie the Zeros in an Arrays to the End of the Array.
+//Program to Move the Zeros in an Arrays to the End of the Array.
 #include<iostream>
 using namespace std;
 
