@@ -54,3 +54,4 @@ int main()
     ZerosToEnd(arr,n);
 
 }
+ 
