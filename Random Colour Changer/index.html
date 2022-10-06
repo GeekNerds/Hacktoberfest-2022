@@ -13,12 +13,12 @@
     <title>Colour Changer</title>
 
     <style>
+        .container{
+            display: grid;  
+        }
         #btn {
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            right: 50%;
+            margin: 30% auto;
+            width: 10rem;
         }
         .heading{
             text-align: center;
@@ -28,7 +28,9 @@
 
 <body>
     <h1 class="heading">Welcome</h1>
-    <button class="btn btn-outline-primary btn-lg" id="btn">Click me 😉</button>
+    <div class="container">
+        <button class="btn btn-outline-primary btn-lg" id="btn">Click me 😉</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
