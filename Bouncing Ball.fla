@@ -1,0 +1,39 @@
+onClipEvent (load) {
+var ground:MovieClip = _root.ground;
+var grav:Number = 0;
+var gravity:Number = 2;
+var speed:Number = 7;
+var maxJump:Number = -15;
+var touchingGround:Boolean = false;
+}
+onClipEvent (enterFrame) {
+_y += grav;
+grav += gravity;
+while (ground.hitTest(_x, _y, true)) {
+_y -= gravity;
+grav = 0;
+}
+if (ground.hitTest(_x, _y+5, true)) {
+touchingGround = true;
+} else {
+touchingGround = false;
+}
+if (Key.isDown(Key.RIGHT)) {
+_x += speed;
+}
+if (Key.isDown(Key.LEFT)) {
+_x -= speed;
+}
+if (Key.isDown(Key.UP) && touchingGround) {
+grav = maxJump;
+}
+if (ground.hitTest(_x+(_width/2), _y-(_height/2), true)) {
+_x -= speed;
+}
+if (ground.hitTest(_x-(_width/2), _y-(_height/2), true)) {
+_x += speed;
+}
+if (ground.hitTest(_x, _y-(height), true)) {
+grav = 3;
+}
+}
