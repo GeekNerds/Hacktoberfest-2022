@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="search">
+        <h1>Search your State or City!</h1>
+        <form id="form">
+          <input id="city" name="city" placeholder="Your state or city" />
+          <button>Search</button>
+        </form>
+        <div id="loader"></div>
+      </div>
+      
+
+      <div id="weather">
+        <div class="temp">
+          <h4 class="weather-name"></h4>
+          <div class="weather-icon">
+            <img src="" />
+          </div>
+        </div>
+
+        <div id="divider"></div>
+
+        <div class="description">
+          <h3 class="city" name="city"></h3>
+          <span class="today" name="today"></span>
+          <span id="temp"></span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
