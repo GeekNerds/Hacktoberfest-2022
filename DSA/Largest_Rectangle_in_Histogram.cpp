@@ -7,62 +7,36 @@ heights = [2,1,5,6,2,3]
 Output: 10
 */
 
-
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int largestRectangleArea(vector<int>& heights) {
-    int n=heights.size();
-    vector<int> v;
-    stack<pair<int,pair<int,int>>> s;
-    v.push_back(heights[0]);
-    s.push({heights[0],{1,0}});
-    for(int i=1;i<n;i++){
-        int count =0;
-        while(s.size()!=0){
-            auto it=s.top();
-            if(it.first<=heights[i]){
-                break;
-            }
-            else{
-                auto at=it.second;
-                count=count+at.first;
-                v.push_back(it.first*(at.first+(i-at.second)-1));
-                s.pop();
-            }
-        }
-        v.push_back(heights[i]);
-        s.push({heights[i],{count+1,i}});
-    }
-    int x=0;
-    while(s.size()!=0){
-        auto it=s.top();
-        x=it.first;
-        auto at=it.second;
-        v.push_back(x*(at.first+(n-at.second)-1));
-        s.pop();
-    }
+int largestRectangleArea(vector<int> &heights){
+	int n = heights.size(), ans = 0;
+	stack<int> s;
+	s.push(-1);
+	heights.push_back(0);
 
-    int max=0;
-    for(int j=0;j<v.size();j++){
-        if(max<v[j]){
-            max=v[j];
-        }
-    }
-        return max;
-    }
+	for (int i = 0; i < n; i++){
+		while (s.top() != -1 && heights[s.top()] >= heights[i]){
+			int j = s.top();
+			s.pop();
+
+			int curr = (i - s.top() - 1) * heights[j];
+			ans = max(ans, curr);
+		}
+		s.push(i);
+	}
+
+	return ans;
+}
 
 int main(){
-    // taking input
-    int n;
-    cin>>n;
-    vector<int> v;
-    for(int i=0;i<n;i++){
-        int x;
-        cin>>x;
-        v.push_back(x);
-    }
+	int n;
+	cin >> n;
+	vector<int> heights(n);
+	for (int i = 0; i < n; i++) cin >> heights[i];
+	
+	cout << largestRectangleArea(heights);
 
-    cout<<largestRectangleArea(v);
-
+	return 0;
 }
