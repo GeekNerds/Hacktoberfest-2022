@@ -1,0 +1,1 @@
+{"ast":null,"code":"import * as React from 'react';\nimport RadioGroupContext from './RadioGroupContext';\nexport default function useRadioGroup() {\n  return React.useContext(RadioGroupContext);\n}","map":null,"metadata":{},"sourceType":"module"}

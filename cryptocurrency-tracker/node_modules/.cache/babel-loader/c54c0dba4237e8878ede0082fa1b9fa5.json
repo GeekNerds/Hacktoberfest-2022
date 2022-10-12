@@ -1,0 +1,1 @@
+{"ast":null,"code":"import * as React from 'react';\n/**\n * @ignore - internal component.\n */\n\nvar Tablelvl2Context = React.createContext();\n\nif (process.env.NODE_ENV !== 'production') {\n  Tablelvl2Context.displayName = 'Tablelvl2Context';\n}\n\nexport default Tablelvl2Context;","map":null,"metadata":{},"sourceType":"module"}
