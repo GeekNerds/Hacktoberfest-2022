@@ -1,0 +1,1 @@
+{"ast":null,"code":"// TODO v5: consider to make it private\nexport default function setRef(ref, value) {\n  if (typeof ref === 'function') {\n    ref(value);\n  } else if (ref) {\n    ref.current = value;\n  }\n}","map":null,"metadata":{},"sourceType":"module"}

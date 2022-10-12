@@ -1,0 +1,1 @@
+{"ast":null,"code":"import * as React from 'react';\n/**\n * @ignore - internal component.\n */\n\nvar ListContext = React.createContext({});\n\nif (process.env.NODE_ENV !== 'production') {\n  ListContext.displayName = 'ListContext';\n}\n\nexport default ListContext;","map":null,"metadata":{},"sourceType":"module"}

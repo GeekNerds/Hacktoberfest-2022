@@ -1,0 +1,1 @@
+{"ast":null,"code":"import * as React from 'react';\n/**\n * @ignore - internal component.\n */\n\nvar TableContext = React.createContext();\n\nif (process.env.NODE_ENV !== 'production') {\n  TableContext.displayName = 'TableContext';\n}\n\nexport default TableContext;","map":null,"metadata":{},"sourceType":"module"}
