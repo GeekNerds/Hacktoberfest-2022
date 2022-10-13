@@ -1,0 +1,29 @@
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+
+<div class="second-page">
+    <ol id="notes-list">
+
+    </ol>
+</div>
+
+<button class="bg"><a style="text-decoration: none; color: white;" href="index.html">Back</a></button>
+
+
+<script>
+    (function getNotes(){
+        let notes = getExistingNotes()
+        let notesArray = Object.values(notes)
+        let orderedList = document.getElementById('notes-list')
+        notesArray.forEach(note=> {
+            let listItem = document.createElement('li')
+            listItem.innerHTML = note
+            orderedList.appendChild(listItem)
+        })
+    })()
+    
+
+</script>

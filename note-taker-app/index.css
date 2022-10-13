@@ -1,0 +1,43 @@
+body {
+    background-color: aqua;
+    color: black;
+}
+
+div.front-page {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
+    justify-content: center;
+    text-align: center;
+}
+
+div.second-page {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
+}
+
+.note-area {
+width: 50%;
+height: 30vh;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  resize: vertical;
+}
+
+.bg {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: center;
+    width: 20%;
+}
+
+
+
+.notes-link {
+    margin-top: 20px;
+    padding-top: 20px;
+}
