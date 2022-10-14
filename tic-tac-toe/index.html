@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="./favicon.ico" rel="icon" type="image/x-icon" />
+    <title>Tic tac toe</title>
+</head>
+
+<body >
+<h1 style=" margin-left:44%;">Tic tac toe Game</h1><hr>
+
+<p style="margin-top:1%; margin-left:46%;"> Play with:
+    <select onchange="AI=this.value">
+        <option value="false">Human</option>
+        <option value="true">Computer</option>
+    </select></p>
+	<hr>
+    <div class="game-container">
+        <div id="c00" class="cell"></div>
+        <div id="c01" class="cell"></div>
+        <div id="c02" class="cell"></div>
+        <div id="c10" class="cell"></div>
+        <div id="c11" class="cell"></div>
+        <div id="c12" class="cell"></div>
+        <div id="c20" class="cell"></div>
+        <div id="c21" class="cell"></div>
+        <div id="c22" class="cell"></div>
+		
+    </div>
+	
+	
+    <button class="restart" onclick="restart()" style="margin-top:30%; margin-left:49%;">Restart</button><hr>
+	
+
+    <footer class="foot">Made by <a href="https://github.com/chetansingh-2">Chetan Singh</a></footer>
+	
+	
+    <script src="../jquery-3.3.1.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
