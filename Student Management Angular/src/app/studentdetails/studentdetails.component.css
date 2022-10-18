@@ -1,0 +1,15 @@
+
+thead{
+    background-color: darkred;
+    color: darkseagreen;
+}
+tbody{
+    background-color: deepskyblue;
+    color: black;
+}
+.border{
+    border-radius: 2px;
+}
+td{
+    font-size: 50px;
+}

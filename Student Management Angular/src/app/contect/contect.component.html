@@ -1,0 +1,110 @@
+<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                        <h3>Welcome Student!</h3>
+                        <h6>It does not matter how slowly you go as long as you do not stop.</h6>
+                       
+                    </div>
+                    <div class="col-md-9 register-right">
+                        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Registration</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Login</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active"  [hidden]="submitted" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h2 class="register-heading">Sign Up</h2>
+                                <form  (ngSubmit)="onSubmit()"> 
+                                <div class="row register-form"  >
+                                 
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" required [(ngModel)]="model.Enrollmentno" placeholder="Enrollment No *"  id= "Enrollmentno" #Enrollment="ngModel" name="Enrollmentno" />
+                                        </div>
+                                        <div [hidden]="Enrollment.valid || Enrollment.pristine"
+                                              class="alert alert-danger">
+                                         Enrollment No is required
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" #name="ngModel"  required [(ngModel)]="model.Name" placeholder="Name *" name="Name" />
+                                        </div>
+                                        <div [hidden]="name.valid || name.pristine"
+                                              class="alert alert-danger">
+                                         Name is required
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" [(ngModel)]="model.age" placeholder="Age *" name="three" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="date" class="form-control" [(ngModel)]="model.Bod" placeholder="Birth Date *" name="four" />
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="maxl">
+                                                <label class="radio inline"> 
+                                                    <input type="radio" name="gender" value="male" checked>
+                                                    <span> Male </span> 
+                                                </label>
+                                                <label class="radio inline"> 
+                                                    <input type="radio" name="gender" value="female">
+                                                    <span>Female </span> 
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                           <select class="form-control" [(ngModel)]="model.dept" name="five" >
+                                             <option *ngFor="let d of dept"  [value]="d">{{d}}</option>
+                                           </select>
+                                        </div>
+                                        <div class="form-group">
+                                           <select class="form-control" [(ngModel)]="model.branch" name="six" >
+                                             <option *ngFor="let d of branch"  [value]="d">{{d}}</option>
+                                           </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" [(ngModel)]="model.result" placeholder="Your Result in CGPA *" name="seven" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text"  [(ngModel)]="model.fees" name="txtEmpPhone" class="form-control" placeholder="Fees *"  name="eight" />
+                                        </div>
+                                        <div class='form-group'>
+                                            <input type="file" name="image"  (change)="selectImage($event)" />
+                                        </div>
+        
+                                        <button type="submit" class="btnRegister"  (click)="Upload()" value="Add">Registration</button>
+                                       
+                                        
+                                    </div>
+                                  
+                                </div>
+                            </form>     
+                            </div>
+                           
+                            <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <h2  class="register-heading">Sign In</h2>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                       
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Email *" value="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="Password *" value="" />
+                                        </div>
+                                        
+                                        <input type="submit" class="btnRegister"    value="Sign In"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>

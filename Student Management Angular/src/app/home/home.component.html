@@ -1,0 +1,35 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Enrollment No</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+         <th scope="col">Birthday</th>
+        <th scope="col">Department</th>
+        <th scope="col">Branch</th>
+         <th scope="col">Result</th>
+         <th scope="col">Fees</th>
+        <th scope="col">Manage</th>
+         <th scope="col">Manage</th>
+
+      </tr>
+    </thead>
+    <tbody *ngFor="let s of Repdata;let id = index">
+      <tr>
+       
+        <td scope="row"><a [title]="s.Enrollment_No"  [routerLink] = "['/student',id]">{{s.Enrollment_No|uppercase}}</a></td>
+        <td scope="row" ><a [title]="s.S_name" [routerLink] = "['/student',id]">{{s.Name|uppercase}}</a></td>
+        <td ><a >{{s.Age}}</a></td>
+        <td >{{s.Birth_Date|date}}</td>
+        <td>{{s.Department}}</td>
+        <td >{{s.Branch}}</td>
+        <td >{{s.Result}} CGPA</td>
+        <td>{{s.Fees|currency:"INR"}}</td>
+        <td>
+            <button class="btn btn-primary"  [routerLink]="['/update/',s._id]">Edit</button></td>
+      <td>   <button class="btn btn-primary"  (click)="removeEmployee(s._id)">Delete</button></td> 
+      </tr>
+    </tbody>
+  </table> 
+  
+<!--    Birth_Date":null,"Department":null,"Branch":null,"Result":null,"Fees":null (click)="edituser(s._id)"  -->
