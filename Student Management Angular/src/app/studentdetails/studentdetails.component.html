@@ -1,0 +1,27 @@
+<table class="table table-striped">
+        <thead>
+                <tr>
+                  <th scope="col">Images</th>
+                  <th scope="col">Enrollment No</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Age</th>
+                  <th scope="col">Department</th>
+                  <th scope="col">Branch</th>
+                  <th scope="col">Manage</th>
+          
+                </tr>
+              </thead>
+<tbody>
+
+<td><img [src]="student.src"  height="100" width="100" id="banner-logo" alt="Landing Page"/></td>
+<td scope="row">{{student.S_EnrollmentNo}}</td>
+<td >{{student.S_name}}</td>
+<td >{{student.S_age}}</td>
+<td >{{student.S_Dept}}</td>
+<td >{{student.S_Branch}}</td>
+<td>
+        <button class="btn btn-primary">Share</button></td>
+
+</tbody>
+
+</table>
