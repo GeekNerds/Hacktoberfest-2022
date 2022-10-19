@@ -1,0 +1,169 @@
+/**
+ * VCam AS2 v1.0
+ *
+ * VCam based on original code by Sham Bhangal and Dave Dixon
+ *
+ * Dynamic Registration AS2 work by Darron Schall (www.darronschall.com)
+ * and AS1 work by Robert Penner (www.robertpenner.com)
+ *
+ * Special Thanks to Josh Steele and Jeff Brenner
+ *
+ * @author Bryan Heisey
+ * @version 1.0
+ * @created 1-April-2008
+ *
+  * Requirements: Flash 8+ & Actionscript 2
+ */
+
+import flash.display.BitmapData;
+
+
+
+addProperty("_x2",get_x2,set_x2);
+addProperty("_y2",get_y2,set_y2);
+addProperty("_xscale2",get_xscale2,set_xscale2);
+addProperty("_yscale2",get_yscale2,set_yscale2);
+addProperty("_rotation2",get_rotation2,set_rotation2);
+
+////////////////////////////////////////////////////////////////////////////
+// Get stage width and height //////////////////////////////////////////////
+
+var oldScaleMode:String = stage.scaleMode;
+stage.scaleMode = "exactFit";
+
+var sW:Number = Stage.width;
+var sH:Number = Stage.height;
+
+stage.scaleMode = oldScaleMode;
+
+////////////////////////////////////////////////////////////////////////////
+// Get Vcam width and height ///////////////////////////////////////////////
+
+var bounds_obj:Object = this.getBounds(this);
+
+var camH:Number = Math.abs(bounds_obj.yMax-bounds_obj.yMin);
+var camW:Number = Math.abs(bounds_obj.xMax-bounds_obj.xMin);
+
+////////////////////////////////////////////////////////////////////////////
+// Creat Point for dynamic registration point //////////////////////////////
+
+var rp = {x:this._x, y:this._y};
+
+onEnterFrame = function ():Void {
+	camControl();
+};
+
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+function camControl():Void {
+
+	////////////////////////////////////////////////////////////////////////////
+	// Move the registration point to the vCams current position ///////////////
+
+	rp.x = _x;
+	rp.y = _y;
+
+	////////////////////////////////////////////////////////////////////////////
+	// Gets the current scale of the vCam //////////////////////////////////////
+
+	var h:Number = camH*(_yscale*.01);
+	var w:Number = camW*(_xscale*.01);
+
+	////////////////////////////////////////////////////////////////////////////
+	// Gets the stage to vCam scale ratio //////////////////////////////////////
+
+	var _scaleY:Number = sH/h;
+	var _scaleX:Number = sW/w;
+
+	////////////////////////////////////////////////////////////////////////////
+	// Positions the parent ////////////////////////////////////////////////////
+
+	_x2 = (w/2)*_scaleX;
+	_y2 = (h/2)*_scaleY;
+
+	_xscale2 = _scaleX*100;
+	_yscale2 = _scaleY*100;
+
+	_rotation2 = -_rotation;
+
+	////////////////////////////////////////////////////////////////////////////
+	// Apply vCam filters to bitmap ////////////////////////////////////////////
+
+	_parent.filters = this.filters;
+	_parent.transform.colorTransform = this.transform.colorTransform;
+
+}
+
+this.onUnload = reset;
+
+function reset():Void {
+
+	////////////////////////////////////////////////////////////////////////////
+	// Resets parent properties ////////////////////////////////////////////////
+
+	_parent._xscale = 100;
+	_parent._yscale = 100;
+	_parent._x = 0;
+	_parent._y = 0;
+	_parent._rotation = 0;
+	_parent._visible = true;
+
+}
+
+function set_x2(value:Number):Void {
+	var a = {x:rp.x, y:rp.y};
+	_parent.localToGlobal(a);
+	_parent._x += value-a.x;
+}
+function get_x2():Number {
+	var a = {x:rp.x, y:rp.y};
+	_parent.localToGlobal(a);
+	return a.x;
+}
+
+function set_y2(value:Number):Void {
+	var a = {x:rp.x, y:rp.y};
+	_parent.localToGlobal(a);
+	_parent._y += value-a.y;
+}
+function get_y2():Number {
+	var a = {x:rp.x, y:rp.y};
+	_parent.localToGlobal(a);
+	return a.y;
+}
+
+function get_xscale2():Number {
+	return _parent._xscale;
+}
+function set_xscale2(value:Number):Void {
+	setProperty2("_xscale",value);
+}
+
+function get_yscale2():Number {
+	return _parent._yscale;
+}
+
+function set_yscale2(value:Number):Void {
+	setProperty2("_yscale",value);
+}
+
+function get_rotation2():Number {
+	return parent.rotation;
+}
+function set_rotation2(value:Number):Void {
+	setProperty2("_rotation",value);
+}
+
+function setProperty2(prop:String, n:Number):Void {
+	var a = {x:rp.x, y:rp.y};
+	_parent.localToGlobal(a);
+
+	_parent[prop] = n;
+
+	var b = {x:rp.x, y:rp.y};
+	_parent.localToGlobal(b);
+
+	_parent._x -= b.x-a.x;
+	_parent._y -= b.y-a.y;
+}
