@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="card" data-tilt>
+            <img src="https://preview.redd.it/a46c98jxwi561.jpg?auto=webp&s=721a9e8bd0ce525b5f13d54a8fd2aa9dec118119"> 
+            <h2>Your Name Here</h2>
+            <p>Full Stack Web Developer | Sophomore at IIT Patna | Tech Lead at GDSC, IIT Patna</p>
+            <div class="links">
+                <a href=""><img src="https://img.icons8.com/color/344/twitter-circled--v1.png"></a>
+                <a href=""><img src="https://img.icons8.com/color/344/github--v1.png"></a>
+                <a href=""><img src="https://img.icons8.com/color/344/linkedin-circled--v5.png"></a>
+            </div>
+            <a href="" class="btn">Contact me</a>
+        </div>
+    </div>
+  
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://1.bp.blogspot.com/-fyF-OXXEBBY/X1altgmlwQI/AAAAAAAA66s/KVb5Fjlb_f41xu_pEjq5VpDhRWr2QbJFACLcBGAsYHQ/s2560/hexagon-blender-4k-22-3840x2160.jpg); /* You can change background here*/
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 90%;
+    max-width: 440px;
+    color: #fff;
+    text-align: center;
+    padding: 50px 35px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255,255,255,0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+}
+
+.card img{
+    width: 140px;
+    border-radius: 50%;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.card p{
+    font-size: 18px;
+    margin: 10px auto;
+    max-width: 330px;
+}
+
+.card .links img{
+    width: 40px;
+    border-radius: 50%;
+    margin: 10px 5px;
+    transition: background 0.5s;
+}
+
+.card .links img:hover{
+    background: #ffffff;
+       box-shadow: 0 0 10px rgb(169, 205, 235);
+}
+
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: transparent;
+    border: 1px solid white;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 30px;
+    margin: 30px 0 10px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: white;
+    font-weight: medium;
+    box-shadow: 0 0 10px rgb(169, 205, 235);
+    color: #137570;
+}
+  </style>
+
+</body>
+</html>
