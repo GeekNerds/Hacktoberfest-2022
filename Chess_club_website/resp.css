@@ -1,0 +1,73 @@
+@media screen and (max-width: 1230px){
+
+	.text-big {
+    font-size: 32px;
+}
+   
+  .nav     { flex-direction: column; }
+  .navlist { flex-direction: column; }
+  .txt-small {
+    font-size: 18px;
+    margin-left: -10%;
+    font-family: 'Ubuntu';
+   }
+
+   .about{
+   	margin-left: 70px;
+   }
+
+   .thumbnail img {
+    width: 213px;
+    border-radius: 150px;
+    margin-top: -34px;}
+
+    
+
+
+
+
+    #slider figure img {
+  
+    border: 0px solid white;
+
+     }  
+  
+   .contacttxt {
+    margin-top: -4%;
+    margin-left: 0%;
+}
+  
+
+    .btndark {
+
+    margin: 12px 38px;
+    padding: 16px 10px;
+    width: -webkit-fill-available;
+  
+    }
+
+    
+    .last {
+    margin-top: 73%;
+    margin-left: -87%;
+} 
+  
+  .txtbg{
+  	padding: 0;
+  	margin-bottom: -11%;
+  }
+
+  .menu    { display: block; }
+  .rightbar{ margin-left: -10%; }
+  .navlist { visibility: hidden;
+             height: 0;  }
+  .smallbtn{ width: auto; }  
+  /*.menu: hover{} */      
+
+  .contactbox{
+    /*border: 2px solid red;*/
+    width: auto;
+    }   
+
+
+}

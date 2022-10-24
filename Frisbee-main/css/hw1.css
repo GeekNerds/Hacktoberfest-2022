@@ -1,0 +1,190 @@
+
+body{
+    margin: 5px;
+    padding :5px 15px;
+    background: black;
+
+}
+
+
+header{
+    background: #cff6cf;
+    text-align: center;
+    background-image: url(flywheel.jpg) ;
+    background-size: cover;
+    height :200%; 
+    padding-bottom: 5%;
+    display: block;
+    
+
+}
+
+h1{
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-decoration-style: solid;
+    padding:20px;
+    font-size: 150%;
+}
+h1:hover{
+    color: #38ACEC;
+}
+
+nav {
+    color: #000000;
+}
+
+h2{
+    font-size: 200%
+    color: #00008B;
+}
+
+    
+img{
+        
+        display: block;
+        height: 90px;
+        width: 150px;
+        border: 2px solid black;
+        margin-bottom: 20px;
+        -webkit-transform: height,width,transform;
+        -o-transform: height,width,transform;
+        -moz-transform: height,width,transform;
+        transform: height,width,transform;
+        -webkit-transition-duration: .5s,.5s,.5s;
+        -o-transition-duration: .5s,.5s,.5s;
+        -moz-transition-duration: .5s,.5s,.5s;
+        transition-duration: .5s,.5s,.5s;     
+  }
+  img:hover{
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+    
+nav a{
+    margin-left:80px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width:10%;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #000000;
+    background: rgba(246,222,246,.5) ;
+    font-weight: bold;
+    -webkit-transition: width,height,transform;
+    -o-transition: width,height,transform;
+    -moz-transition: width,height,transform;
+    transition: width,height,transform;
+    -webkit-transition-duration: .5s,.5s,.5s;
+    -o-transition-duration: .5s,.5s,.5s;
+    -moz-transition-duration: .5s,.5s,.5s;
+    transition-duration: .5s,.5s,.5s;
+    display: inline-block;
+
+}
+
+a:hover {
+    background-color: #38ACEC;
+    width:200px;
+
+    }
+ .active {
+    background-color: #FFFFFF;
+}
+ 
+
+.left{
+    background: linear-gradient(to bottom, #33ccff 0%, #99ff66 100%);
+    -webkit-background: linear-gradient(to bottom, #33ccff 0%, #99ff66 100%);
+    -o-background: linear-gradient(to bottom, #33ccff 0%, #99ff66 100%);
+    -moz-background: linear-gradient(to bottom, #33ccff 0%, #99ff66 100%);
+    display:inline-block;
+    padding: 3%;
+    float: left;
+    box-sizing: border-box;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.right{
+    -webkit-background: linear-gradient(to bottom, #33ccff 0%, #0066cc 100%);
+    -o-background: linear-gradient(to bottom, #33ccff 0%, #0066cc 100%);
+    -moz-background: linear-gradient(to bottom, #33ccff 0%, #0066cc 100%);
+    background: linear-gradient(to bottom, #33ccff 0%, #0066cc 100%);
+    font-family: Arial,"Times New Roman",serif;
+    margin-left: 5px;
+    display:inline-block;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 2%;
+    box-sizing: border-box;
+    width: 70%;
+    clear: both;
+    
+}
+.right :hover {
+    background: rgba(246,222,246,.5) ;
+}
+
+table{
+    margin-left:10%;
+}
+th{
+    -webkit-background: linear-gradient(to bottom, #3333cc 0%, #33ccff 100%);
+    -o-background: linear-gradient(to bottom, #3333cc 0%, #33ccff 100%);
+    -moz-background: linear-gradient(to bottom, #3333cc 0%, #33ccff 100%);
+    background: linear-gradient(to bottom, #3333cc 0%, #33ccff 100%);
+    -webkit-border-radius: 10px 10px 0px 0px;
+    -o-border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
+    border:.5px solid #000000;
+    text-shadow: .5px .5px #ffffff;
+    padding:1%;
+}
+td{
+    background-color: #ffffff;
+    font-size: 100%;
+    padding:1%;
+    -webkit-opacity: .5;
+    -o-opacity: .5;
+    -moz-opacity: .5;
+    opacity: .5;
+
+}
+td:first-child { text-align:left; }
+td:nth-child(2) { text-align:center; }
+td:nth-child(3) { text-align:center; }
+td:hover{
+    -webkit-opacity: 1;
+    -o-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+  background: rgba(246,222,246,.5) ;
+}
+footer{
+ color: #ffffff;
+ position:relative;
+ bottom: 0;
+ left:0;
+ text-align: center;
+ padding: 10%;
+}
+#heart{ 
+
+ color: red;
+}
+#heart:hover{
+ 
+  color: white;
+
+}

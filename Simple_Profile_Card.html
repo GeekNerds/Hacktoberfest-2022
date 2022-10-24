@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+</head>
+<body>
+    <div class="main">
+        <div class="img-container">
+            <img src="https://i.pinimg.com/originals/9c/44/5b/9c445b10fe9658a79f31fcdad62b12b8.jpg" alt="profile">
+        </div>
+        <div class="text">
+            <p class="name">Your Name</p>
+            <p>FrontEnd devlopment || Linux enthusiasm</p>
+        </div>
+    </div>
+  <style>
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.img-container{
+    height: 200px;
+    width: 200px;
+    background-color: #80ed99;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 10px 18px #57cc99;
+}
+.main{
+    width: 500px;
+    height: 500px;
+    background-color: #c7f9cc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    flex-direction: column;
+    box-shadow: 5px 10px 18px #ccc7c7;
+}
+.text{
+    width: 450px;
+    height: 100px;
+    background-color: #38a3a5;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 20px;
+    box-shadow: 5px 10px 18px #57cc99;
+}
+  </style>
+</body>
+</html>
