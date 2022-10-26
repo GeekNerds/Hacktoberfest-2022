@@ -17,7 +17,10 @@ input[type="text"]:focus {
 .todos li {
     background: #ec4d37;
 }
+.todos li:hover{
+    background:rgb(168, 51, 51);
 
+}
 .delete {
     cursor: pointer;
 }
@@ -28,4 +31,11 @@ input[type="text"]:focus {
 
 .f {
     display: block !important;
+}
+.completed{
+    background:green!important;
+    -webkit-transition: background 1s 0s ease-in-out, all 0.5s 0s ease;
+    -moz-transition: background 1s 0s ease-in-out, all 0.5s 0s ease;
+    -o-transition: background 1s 0s ease-in-out, all 0.5s 0s ease;
+    transition: background 1s 0s ease-in-out, all 0.5s 0s ease;
 }
