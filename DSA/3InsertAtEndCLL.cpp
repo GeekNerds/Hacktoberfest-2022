@@ -18,11 +18,11 @@ void print(Node *head)
 		return;
 	}
 	Node *value = head;
-	do{
+	while(value != NULL){
 		cout<<value->data<<" ";
 		value = value->next;
 	}
-	while(value != head);
+	cout<<endl;
 
 }
 
