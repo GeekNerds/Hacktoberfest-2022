@@ -1,0 +1,2 @@
+This contains the python and mysql connected program that insert record in database.
+ 
