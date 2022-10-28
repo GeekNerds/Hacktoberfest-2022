@@ -1,0 +1,66 @@
+onClipEvent (load) {
+var ground:MovieClip = _root.ground;
+var grav:Number = 0;
+var gravity:Number = 2;
+var maxspeed:Number = 7;
+var xspeed:Number = 0;
+var acceleration:Number = 2;
+var maxJump:Number = -12;
+var friction:Number = 0.9;
+var yspeed:Number = 0;
+var bounce:Number = -0.9;
+var touchingGround:Boolean = false;
+}
+onClipEvent (enterFrame) {
+xspeed *= friction;
+if (Math.abs(speed) < 0.3) {
+xspeed = 0;
+}
+_y += grav;
+grav += gravity;
+while (ground.hitTest(_x, _y, true)) {
+_y -= gravity;
+grav = 0;
+}
+if (ground.hitTest(_x, _y+5, true)) {
+touchingGround = true;
+} else {
+touchingGround = false;
+}
+if (Key.isDown(Key.RIGHT)) {
+if ( xspeed < maxspeed ) {
+xspeed += acceleration;
+}
+}
+if (Key.isDown(Key.LEFT)) {
+if ( Math.abs(xspeed) < maxspeed ) {
+xspeed -= acceleration;
+}
+}
+if (Key.isDown(Key.UP) && touchingGround) {
+grav = maxJump;
+}
+if (ground.hitTest(_x+(_width/2), _y-(_height/2), true)) {
+acceleration = -2;
+xspeed = 0;
+xspeed += acceleration;
+_x += xspeed ;
+}else{
+acceleration = 2;
+}
+if (ground.hitTest(_x-(_width/2), _y-(_height/2), true)) {
+acceleration = -2;
+xspeed = 0;
+xspeed -= acceleration;
+_x += xspeed ;
+}else{
+acceleration = 2;
+}
+if (ground.hitTest(_x-(_width/2), _y-(_height/2), true)) {
+_x += xspeed;
+}
+if (ground.hitTest(_x, _y-(height), true)) {
+grav = 3;
+}
+_x += xspeed;
+}

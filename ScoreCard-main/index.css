@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    background-color: #191970;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    /* border-style: dashed; */
+}
+h3{
+    /* border-style: dashed; */
+    margin-top: 15%;
+    font-size: 25px;
+    text-align: center;
+   color: white;
+}
+
+.box p{
+    font-size: 60px;
+    /* border-style: solid;    */
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    background-color: black;
+    color: red;
+    border-radius: 8px;
+    font-variant-numeric: tabular-nums;
+}
+button{
+    margin-top: 3%;
+    border-radius: 5px;
+}

@@ -37,3 +37,12 @@ if (ground.hitTest(_x, _y-(height), true)) {
 grav = 3;
 }
 }
+
+// here _x and _y are reset coordinates 
+// char is instance name of ball
+// Rest Position code
+//onClipEvent (enterFrame) {
+//_y += (_root.char._y-_y)/4;
+//_x += (_root.char._x-_x)/4;
+//}
+

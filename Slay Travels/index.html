@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="" UTF-8>
+    <title>Slay Travels</title>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+    body {
+        font-family: 'Baloo Bhai', cursive;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        background: url('img/bg.png');
+        height: 800px;
+    }
+
+    .left {
+        position: absolute;
+        left: 60px;
+        top: 20px;
+        display: inline-block;
+        /* border: 2px solid white; */
+        height: auto;
+
+
+    }
+
+    .left img {
+        width: 98px;
+        margin: 0px;
+
+    }
+
+    .left div {
+        text-align: center;
+        line-height: 0px;
+        font-size: 25px;
+    }
+
+    .mid {
+        display: block;
+        width: 40%;
+        margin: 30px auto;
+        /* border: 2px solid white; */
+        background-color: rgb(214, 136, 237);
+        border-radius: 30px;
+        position: sticky;
+        top: 30px;
+
+    }
+
+    .right {
+        position: absolute;
+        right: 34px;
+        top: 40px;
+        display: inline-block;
+        /* border: 2px solid white; */
+
+    }
+
+    .navbar {
+        display: inline-block;
+
+    }
+
+    .navbar li {
+        display: inline-block;
+        font-size: 20px;
+
+    }
+
+    .navbar li a {
+        color: white;
+        text-decoration: none;
+        padding: 34px 23px;
+
+
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+        text-decoration: underline;
+        color: rgb(29, 29, 29);
+    }
+
+    .btn {
+        font-family: 'Baloo Bhai', cursive;
+        margin: 0px 9px;
+        background-color: rgb(29, 29, 29);
+        color: white;
+        padding: 4px 10px;
+        border-radius: 10px;
+        font-size: 15px;
+        cursor: pointer;
+
+    }
+    .btn:hover{
+        background-color: rgb(95, 95, 95);
+    }
+
+    .container {
+        border: 2px solid white;
+        margin: 100px 40px;
+        padding: 61px;
+        width: 44%;
+        border-radius: 28px;
+        display: inline-block;
+        box-sizing: border-box;
+
+    }
+    .form-group input{
+        font-family: 'Baloo Bhai', cursive;
+        text-align: center;
+        display: block;
+        width: 508px;
+        padding: 1px;
+        border: 2px solid black;
+        margin: 15px auto;
+        font-size: 23px;
+        border-radius: 8px;
+    }
+    .container h1{
+        text-align: center;
+    }
+    .container  button{
+        display: block;
+        width: 103%;
+        margin: 40px auto;
+
+    }
+    .container img{
+        height: 350px;
+        width: 550px;
+    }
+ 
+  
+</style>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="img/icon.png" alt="">
+            <div>Slay Travels</div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">Call Us Now</button>
+            <button class="btn">Email Us</button>
+
+        </div>
+    </header>
+    <!-- <div class="boxes">  -->
+        <div class="container">
+            <h1>Start your journey now</h1>
+            <form action="noaction.php">
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Name">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Number">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Destination">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter Duration of Travel">
+                </div>
+                <button class="btn">Submit</button>
+
+            </form>
+        </div>
+
+        <div class="container">
+            <img src="img/image.jpg">
+           
+        </div>
+
+
+    <!-- </div> -->
+
+
+</body>
+
+</html>

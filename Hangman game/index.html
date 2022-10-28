@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-tl from-gray-900 to-gray-600 bg-gradient-to-r">
+    <div class="flex flex-col h-screen justify-top items-center">
+      <div>
+        <h1 class="mt-3 text-4xl text-white font-semibold font-sans">
+          Hangman
+          <sub class="text-xl"
+            >by
+            <a href="https://github.com/utkarsh575" class="text-yellow-400"
+              >Utkarsh575</a
+            ></sub
+          >
+        </h1>
+      </div>
+      <div class="right-10 top-20 absolute text-xl text-white font-semibold">
+        Wrong Guesses: <span id="mistakes">0</span> of
+        <span id="maxWrong"></span>
+      </div>
+
+      <div class=" mt-[5rem] text-2xl text-white font-medium">
+        
+        <div class="flex flex-col items-center gap-3">
+            <img src="./images/0.png" alt="" id="hangmanPic"  />
+            <p>Guess the Programming Language or Tool</p>
+            <p class="text-lg" id="wordSpotlight">
+              The word to be guessed goes here:-
+            </p>
+        </div>
+
+        <div
+          class="mt-10 bg-[rgba(0,0,0,0.3)] border rounded-xl p-5"
+          id="keyboard"
+        ></div>
+      </div>
+      <button
+        class="mt-[5rem] bg-yellow-500 border-2 border-black px-6 py-4 rounded-xl hover:bg-yellow-600" 
+        onClick="reset()"
+      >
+        Reset
+      </button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

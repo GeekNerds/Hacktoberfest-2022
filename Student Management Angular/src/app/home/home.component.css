@@ -1,0 +1,28 @@
+thead{
+    background-color: darkred;
+    color: darkseagreen;
+}
+tbody{
+    background-color: deepskyblue;
+    color: black;
+}
+.border{
+    border-radius: 2px;
+}
+.table-striped{
+    background-color: orchid;
+}
+td{
+    font-size: 20px;
+    text-align: center;
+}
+th{
+    font-size: 20px;
+    text-align: center;
+}
+a{
+    color: cornsilk;
+}
+button{
+    font-size: 20px;
+}

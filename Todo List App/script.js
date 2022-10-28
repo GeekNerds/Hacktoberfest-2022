@@ -1,20 +1,22 @@
-const ul = document.querySelector("ul");
-const form2 = document.addfrm;
-const add = form2.add;
-const form1 = document.form1;
-const search = form1.search;
-form2.addEventListener("submit", (e) => {
+const ul = $("ul");
+const form2element=document.addfrm;
+const form2 = $(form2element);
+const add = $(form2element.add);
+const form1element = document.form1;
+const form1 = $(form1element);
+const search = $(form1element.search);
+form2.submit(function(e){
   e.preventDefault();
-  if (add.value.length > 0) {
-    ul.innerHTML +=
+  if (add.val().length > 0) {
+    ul.append(
       '<li class="list-group-item d-flex justify-content-between align-items-center"><span>' +
-      add.value +
-      '</span><i class="far fa-trash-alt delete"></i></li>';
-    add.value = "";
+      add.val() +
+      '</span><i class="far fa-trash-alt delete"></i></li>');
+    add.val("") ;
   }
 });
 
-ul.addEventListener("click", (e) => {
+ul.click(function(e){
   let i = e.target;
   if (i.nodeName == "I") {
     let li = i.parentElement;
@@ -22,19 +24,26 @@ ul.addEventListener("click", (e) => {
   }
 });
 
-form1.addEventListener("submit", (e) => {
+form1.submit(function(e){
   e.preventDefault();
 });
 
-search.addEventListener("keyup", () => {
-  let all = ul.querySelectorAll("li");
-  all.forEach((x) => {
-    x.classList.add("filtered");
-  });
-  all.forEach((x) => {
-    let str = search.value.toLowerCase();
-    let s = x.innerText.toLowerCase();
-    let res = s.indexOf(str);
-    if (res != -1) x.classList.remove("filtered");
-  });
+search.keyup(function(){
+    let all = ul.find("li");
+    all.each(function(){
+        $(this).addClass("filtered");
+    });
+    all.each(function(){
+        let str = search.val().toLowerCase();
+        let s = $(this).text().toLowerCase();
+        let res = s.indexOf(str);
+        if (res != -1) $(this).removeClass("filtered");
+    });
 });
+
+$(ul).click(function(e){
+    let li = e.target;
+  if (li.nodeName == "LI") {
+    $(li).toggleClass("completed");
+  }
+  });

@@ -1,0 +1,22 @@
+.active{
+    background-color:black;
+}
+.card{
+  align-items: center;
+  box-align: center;
+  min-height: 200px;
+  max-width: 18rem;
+}
+div{
+  align-items: center; 
+}
+body{
+  align-items: center;
+}
+.navbar-brand,icon{
+  color: black;
+}
+.navbar-custom {
+    color: #FFFFFF;
+    background-color:lightblue;
+}
