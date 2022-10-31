@@ -116,9 +116,12 @@ const loadQuiz = () => {
   d_text.innerText = currentQuizData.d;
 };
 
+let q_num = 1;
 loadQuiz();
 
 submitButton.addEventListener("click", () => {
+  q_num++;
+  document.getElementById("q_no").innerHTML=q_num;
   const answer = getSelected();
   if (answer) {
     if (answer === quizData[currentQuiz].correct) score++;
